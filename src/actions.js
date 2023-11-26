@@ -24,7 +24,6 @@ export const notEkleAPI = (yeniNot) => (dispatch) => {
       if (res.status === 200) {
         dispatch(notEkle(yeniNot));
       }
-      console.log("APIPOST SUCCESS", res.data);
     })
     .catch((error) => console.log(error));
 };
