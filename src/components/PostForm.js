@@ -27,7 +27,7 @@ export default function PostForm() {
     };
 
     dispatch(notEkleAPI(yeniNot));
-    toast("Yeni not eklendi!");
+    toast("Yeni not eklendi!", { type: "success" });
     setTimeout(() => history.push("/notlar"), 2000);
   }
 
