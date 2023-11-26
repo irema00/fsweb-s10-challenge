@@ -3,6 +3,8 @@ import { Switch, Route, NavLink } from "react-router-dom";
 import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
 import Img from "./assets/gratitude.jpg";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   return (
@@ -23,6 +25,7 @@ export default function App() {
             activeClassName="text-amber-600"
           >
             Tüm Notlar
+            <ToastContainer />
           </NavLink>
           <NavLink
             to="/yeni-not"
@@ -30,6 +33,7 @@ export default function App() {
             activeClassName="text-amber-600"
           >
             Yeni Not
+            <ToastContainer />
           </NavLink>
         </nav>
       </div>
