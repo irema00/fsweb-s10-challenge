@@ -33,7 +33,7 @@ function baslangicNotlariniGetir(key) {
 function myReducer(state = baslangicDegerleri, action) {
   switch (action.type) {
     case NOT_EKLE:
-      const yeniNotEkle = [...state.notlar, action.payload];
+      const yeniNotEkle = [action.payload, ...state.notlar];
       localStorageStateYaz(s10chLocalStorageKey, { notlar: yeniNotEkle });
       return {
         ...state,
