@@ -35,7 +35,7 @@ export const notSilAPI = (id) => (dispatch) => {
     .delete("https://httpbin.org/anything", { data: id })
     .then((res) => {
       if (res.status === 200) {
-        dispatch(notSil(res.data));
+        dispatch(notSil(id));
       }
     })
     .catch((error) => console.log(error));
