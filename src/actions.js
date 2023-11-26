@@ -22,7 +22,7 @@ export const notEkleAPI = (yeniNot) => (dispatch) => {
     .post("https://httpbin.org/anything", yeniNot)
     .then((res) => {
       if (res.status === 200) {
-        dispatch(notEkle(res.data));
+        dispatch(notEkle(yeniNot));
       }
       console.log("APIPOST SUCCESS", res.data);
     })
